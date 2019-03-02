@@ -68,6 +68,9 @@ public:
     //! internally as well.
     void run();
 
+    //! \brief Run the server loop once to process any ready events.
+    void poll();
+
     //! \brief Starts the server loop on one or more threads. This is a
     //! non-blocking call.
     //!

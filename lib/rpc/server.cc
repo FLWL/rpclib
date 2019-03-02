@@ -115,6 +115,8 @@ void server::suppress_exceptions(bool suppress) {
 
 void server::run() { pimpl->io_.run(); }
 
+void server::poll() { pimpl->io_.poll(); }
+
 void server::async_run(std::size_t worker_threads) {
     pimpl->loop_workers_.create_threads(worker_threads, [this]() {
         name_thread("server");
